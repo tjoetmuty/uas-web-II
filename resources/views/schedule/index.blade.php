@@ -10,7 +10,7 @@
     <nav class="bg-yellow-500">
         <div class="container mx-auto flex justify-between items-center p-4">
             <div class="text-white font-semibold text-lg"><a href="">Daftar Kelas</a></div>
-            <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+            <button class="btn" onclick="my_modal_1.showModal()">Add Schedule</button>
         </div>
             <dialog id="my_modal_1" class="modal">
                 <div class="modal-box">
@@ -102,7 +102,7 @@
     
                         <div class="mb-4">
                             <label for="priority" class="block text-gray-700  text-sm font-bold mb-2">Priority:</label>
-                            <input type="text" id="priority" name="priority" class="border border-gray-300 rounded-md py-2 px-3 w-full @error('priority') is-invalid @enderror" value="{{old('priority')}}">
+                            <input type="number" id="priority" name="priority" class="border border-gray-300 rounded-md py-2 px-3 w-full @error('priority') is-invalid @enderror" value="{{old('priority')}}">
                         </div>
                         {{--alert--}}
                         @error('priority')
@@ -129,7 +129,7 @@
                         {{--end alert--}}
     
                         <div class="mb-4">
-                            <label for="asignee" class="block text-gray-700  text-sm font-bold mb-2">Priority:</label>
+                            <label for="asignee" class="block text-gray-700  text-sm font-bold mb-2">Asignee:</label>
                             <input type="text" id="asignee" name="asignee" class="border border-gray-300 rounded-md py-2 px-3 w-full @error('asignee') is-invalid @enderror" value="{{old('asignee')}}">
                         </div>
                         {{--alert--}}
@@ -143,7 +143,7 @@
                     </div>
 
                     <div class="mb-4">
-                        <label for="category_task" class="block text-gray-700  text-sm font-bold mb-2">Task:</label>
+                        <label for="category_task" class="block text-gray-700  text-sm font-bold mb-2">Category Task:</label>
                         <input type="text" id="category_task" name="category_task" class="border border-gray-300 rounded-md py-2 px-3 w-full @error('category_task') is-invalid @enderror" value="{{old('category_task')}}">
                     </div>
                     {{--alert--}}
@@ -154,9 +154,9 @@
                     
                     @enderror
                     {{--end alert--}}
-                    
-                    <button class="btn">Add</button>
-                </form>
+                    <form method="dialog">
+                        <button class="btn">Add</button>
+                    </form>
                 </form>
                 </div>
             </div>
@@ -169,7 +169,7 @@
       <tr>
       <th class="border px-4 py-2">No</th>
                     <th class="border px-4 py-2">Task Title</th>
-                    <th class="border px-4 py-2">Deskription</th>
+                    <th class="border px-4 py-2">Description</th>
                     <th class="border px-4 py-2">Task</th>
                     <th class="border px-4 py-2">Start</th>
                     <th class="border px-4 py-2">End</th>
