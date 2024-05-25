@@ -48,6 +48,6 @@ class ScheduleController extends Controller
             ]);
 
         //redirect to index
-        return redirect()->route('schedule.index')->with(['success' => 'Data berhasil Disimpan!']);
+        return redirect()->route('schedule.index')->with(['success' => 'Your data successfully saved!']);
     }
 }
