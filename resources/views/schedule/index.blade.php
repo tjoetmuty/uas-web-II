@@ -116,7 +116,7 @@
 
                     <div class="flex justify-between">
                         <div class="mb-4">
-                            <label for="status" class="block text-gray-700  text-sm font-bold mb-2">Notes:</label>
+                            <label for="status" class="block text-gray-700  text-sm font-bold mb-2">Status:</label>
                             <input type="text" id="status" name="status" class="border border-gray-300 rounded-md py-2 px-3 w-full @error('status') is-invalid @enderror" value="{{old('status')}}">
                         </div>
                         {{--alert--}}
