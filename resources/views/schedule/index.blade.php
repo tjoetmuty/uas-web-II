@@ -197,6 +197,10 @@
                     <td class="px-4 py-2 flex justify-around">
                         <form method="POST">
                         <a href="" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block mb-1">Edit</a>
+                        @csrf
+                        @method('DELETE')
+                        <!-- <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded inline-block mb-1">Delete</button> -->
+                        <a href=""><x-lucide-trash-2/></a>
                         </form>
                     </td>
                 </tr>
