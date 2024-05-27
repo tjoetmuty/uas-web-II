@@ -148,7 +148,7 @@
 
 <div class="container mx-auto p-4">
     <div class="overflow-x-auto">
-        <table class="table w-full" id="schedule-table">
+        <table class="table w-full p-4" id="schedule-table">
             <thead>
                 <tr>
                     <th class="border px-4 py-2">No</th>
